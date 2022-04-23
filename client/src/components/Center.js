@@ -24,9 +24,16 @@ function Center(props) {
             <div className='w-full h-full absolute'></div>
             <Spline scene="https://prod.spline.design/aZdc9n-qmGUJRoMg/scene.spline" />
         </div>
-        
+
+        <div className='text-3xl'>
+            {`Clicks: ${props.clicks}`}
+        </div>
         <div className='m-5 rounded-xl h-1/2'>
             <div className='p-6 text-3xl w-full'>
+               {`Predicted Carbon Input This Year: ${props.carbonThisYear} Gigatons`} 
+            </div>
+            <div className='p-6 text-3xl w-full'>
+                Current Temperature:
             </div>
         </div>
     </div>
