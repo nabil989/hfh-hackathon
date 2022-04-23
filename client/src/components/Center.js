@@ -1,6 +1,6 @@
 import React from 'react'
 import Spline from '@splinetool/react-spline';
-
+import Status from './Status'
 function Center() {
     const resetEarth=() => {
         document.getElementById("earth").style.transform = "scale(0.8)";
@@ -14,15 +14,15 @@ function Center() {
         <div className='p-6 mb-20 text-5xl font-bold font'>
             April 2022
         </div>
+        <Status/>
         <div className='transition-all duration-75 scale-[0.8]' id="earth" onClick={click}>
             <div className='w-full h-full absolute'></div>
             <Spline scene="https://prod.spline.design/aZdc9n-qmGUJRoMg/scene.spline" />
-    
         </div>
         
         <div className='m-5 rounded-xl h-1/2'>
             <div className='p-6 text-3xl w-full'>
-                
+
             </div>
         </div>
     </div>
