@@ -1,7 +1,7 @@
 import React from 'react'
 import Spline from '@splinetool/react-spline';
 
-function Center() {
+function Center({year, month}) {
     const resetEarth=() => {
         document.getElementById("earth").style.transform = "scale(0.8)";
     }
@@ -12,7 +12,7 @@ function Center() {
   return (
     <div className='w-1/3 h-screen text-center text-white flex flex-col items-center'>
         <div className='p-6 mb-20 text-5xl font-bold font'>
-            DATE
+            {`${month} ${year}`}
         </div>
         <div className='transition-all duration-75 scale-[0.8]' id="earth" onClick={click}>
             <div className='w-full h-full absolute'></div>

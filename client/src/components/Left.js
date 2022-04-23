@@ -26,7 +26,7 @@ function Left() {
                 <div className='bg-blue-500 p-2 rounded-sm' onClick={addtree}>+</div>
             </div>
             <div>
-                {`Trees ${trees.length}: -100 lbs of carbon/yr`}
+                {`Forest ${trees.length}: -30,000 lbs of carbon/yr`}
             </div>
         </div>
         
