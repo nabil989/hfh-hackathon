@@ -19,16 +19,17 @@ function useInterval(callback, delay) {
       }, delay);
       return () => clearInterval(id);
     }, [delay]);
-  }
+}
 
-  
+  // formula for GW ppm 
+  // gigatons/3 per month 
 function Container() {
     const [percentage, changePercent] = useState(50);
     const updateBar = (x) => {
       changePercent(x)
     }
     const updateCarbon = (x) => {
-      
+      setClicks(clicks+1)
       setCurrentCarbon(currentCarbon+x)
       updateBar(50+(currentCarbon))
     }
