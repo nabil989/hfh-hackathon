@@ -14,7 +14,7 @@ function Center() {
         <div className='p-6 mb-20 text-5xl font-bold font'>
             April 2022
         </div>
-        <div className='transition-all duration-75 scale-[80]' id="earth" onClick={click}>
+        <div className='transition-all duration-75 scale-[0.8]' id="earth" onClick={click}>
             <div className='w-full h-full absolute'></div>
             <Spline scene="https://prod.spline.design/aZdc9n-qmGUJRoMg/scene.spline" />
     
