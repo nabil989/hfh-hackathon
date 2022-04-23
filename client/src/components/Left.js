@@ -1,7 +1,9 @@
 import React, {useState} from 'react'
 
 function Left() {
-    const [trees, updateTrees] = useState([1,2]);
+    const [trees, updateTrees] = useState([]);
+    const [treeprice, setTreePrice] = useState(5);
+
     const addtree = () => {
         let temp = [...trees, 1];
         updateTrees(temp);
@@ -14,12 +16,20 @@ function Left() {
         <div>
             Current Carbon Reduction:
         </div>
-        <div className='flex flex-row space-x-2'>
-            {trees.map((id) => {
-                return <div className='text-3xl'>🌳</div>
-            })}
-            <div className='bg-blue-500 p-2 rounded-sm' onClick={addtree}>+</div>
+        <div className='flex flex-col space-y-2 items-start'>
+            <div className='flex flex-row space-x-2'>
+                {trees.map((id, count) => {
+                    if(count < 10){
+                        return <div className='text-3xl'>🌳</div>
+                    }
+                })}
+                <div className='bg-blue-500 p-2 rounded-sm' onClick={addtree}>+</div>
+            </div>
+            <div>
+                {`Trees ${trees.length}: -100 lbs of carbon/yr`}
+            </div>
         </div>
+        
 
         
         <div className='m-5 rounded-xl h-1/2'>
