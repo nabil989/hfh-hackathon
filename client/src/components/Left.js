@@ -1,12 +1,19 @@
 import React, {useState} from 'react'
 
-function Left() {
+function Left(props) {
     const [trees, updateTrees] = useState([]);
-    const [treeprice, setTreePrice] = useState(5);
+    const [treeprice, setTreePrice] = useState(2);
 
     const addtree = () => {
-        let temp = [...trees, 1];
-        updateTrees(temp);
+        
+        if(props.clicks >= treeprice){
+            props.setClicks(props.clicks - treeprice);
+            setTreePrice(Math.floor(treeprice + treeprice*trees.length/10));
+            let temp = [...trees, 1];
+            updateTrees(temp);
+            props.setForestCount(trees.length);
+        }
+        
     }
   return (
     <div className='w-1/3 h-screen text-center text-white flex flex-col items-start p-10 space-y-10 text-xl'>
@@ -14,9 +21,16 @@ function Left() {
             Stats
         </div>
         <div>
-            Current Carbon Reduction:
+            Current Carbon Reduction: 
+        </div>
+        <div>
+            Net Carbon This Year:
         </div>
         <div className='flex flex-col space-y-2 items-start'>
+            <div>
+            {`Buy Forest ${treeprice} Clicks`}
+            </div>
+            
             <div className='flex flex-row space-x-2'>
                 {trees.map((id, count) => {
                     if(count < 10){
