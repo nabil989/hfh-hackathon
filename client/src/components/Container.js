@@ -25,8 +25,7 @@ function useInterval(callback, delay) {
 function Container() {
     const [percentage, changePercent] = useState(50);
     const updateBar = (x) => {
-
-      changePercent(-x)
+      changePercent(x)
     }
     const updateCarbon = (x) => {
       
@@ -59,8 +58,8 @@ function Container() {
 
   return (
     <div className='w-screen h-screen flex flex-row bg-[#121316] font'>
-       <Left></Left>
-        <Center updateCarbon={updateCarbon} percentage={percentage} year = {year} month = {months[month]}></Center>
+        <Left></Left>
+        <Center currentCarbon={Math.floor(currentCarbon*1000)/1000+420} goalCarbon={goalCarbon} maxCarbon={maxCarbon} updateCarbon={updateCarbon} percentage={percentage} year = {year} month = {months[month]}></Center>
         <Right></Right>
     </div>
     
