@@ -65,7 +65,7 @@ function Container() {
     <div className='w-screen h-screen flex flex-row bg-[#121316] font'>
         <Left clicks = {clicks} setForestCount={setForestCount} setClicks={setClicks}></Left>
         <Center currentCarbon={Math.floor(currentCarbon*1000)/1000+420} goalCarbon={goalCarbon} maxCarbon={maxCarbon} updateCarbon={updateCarbon} percentage={percentage} year = {year} month = {months[month]} carbonThisYear = {carbonArray[year-1900]} clicks={clicks}></Center>
-        <Right></Right>
+        <Right currentCarbon={Math.floor(currentCarbon*1000)/1000+420}/>
     </div>
     
   )
