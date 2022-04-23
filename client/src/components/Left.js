@@ -77,7 +77,7 @@ function Left(props) {
                 <div className='bg-blue-500 p-2 rounded-sm' onClick={addResearch}>+</div>
             </div>
             <div>
-                {`Research ${trees.length} points into technology and public awareness. -200,000 lbs of carbon/yr`}
+                {`Research ${research.length} points into technology and public awareness. -200,000 lbs of carbon/yr`}
             </div>
         </div>
         
