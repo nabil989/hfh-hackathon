@@ -16,7 +16,7 @@ function Center(props) {
         <div className='p-6 mb-20 text-5xl font-bold font'>
             {`${props.month} ${props.year}`}
         </div>
-        <h className='text-3xl pb-4'>Carbon Status Bar</h>
+        <div className='text-3xl pb-4'>Carbon Status Bar</div>
         
         <Status percentage={props.percentage} goalCarbon={props.goalCarbon} maxCarbon={props.maxCarbon}/>
         <h>Current Carbon: {props.currentCarbon} ppm</h>
