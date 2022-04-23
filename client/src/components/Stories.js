@@ -16,27 +16,34 @@ const Stories = (props) => {
 //     "UPDATE: The E.U.'s new policy that rewards citizens based on the amount of trash they recycle shows tremendous decrease in gas emissions.", 
 //   "UPDATE: A record-breaking winter storm has caused a power-outage across the south of the US", "UPDATE: Dodobirds, once thought to have gone extinct, have been seen again."]);
     return (
-        <div className='flex flex-col'>
+        <div className='flex flex-col space-y-6'>
             {props.stories.map((val, index) => {
-                    if(props.currentCarbon >= 380){
-                        return <div className='text-3xl'>{props.stories[0]}</div>
-                    }
-                    if(props.currentCarbon >= 421) {
-                        return <div className='text-3xl'>{props.stories[4]}</div>
+                console.log(val);
+                if(props.currentCarbon >= 420 && props.currentCarbon  > val[0]){
+                    return <div className='text-3xl'>{val[1]}</div>
+                }
+                if(props.currentCarbon < 420 && props.currentCarbon  < val[0]){
+                    return <div className='text-3xl'>{val[1]}</div>
+                }
+                    // if(props.currentCarbon >= 380){
+                    //     return <div className='text-3xl'>{props.stories[0]}</div>
+                    // }
+                    // if(props.currentCarbon >= 421) {
+                    //     return <div className='text-3xl'>{props.stories[4]}</div>
 
-                    }
-                    if(props.currentCarbon >= 350 && props.currentCarbon < 380) {
-                        return <div className='text-3xl'>{props.stories[3]}</div>
+                    // }
+                    // if(props.currentCarbon >= 350 && props.currentCarbon < 380) {
+                    //     return <div className='text-3xl'>{props.stories[3]}</div>
 
-                    }
-                    if(props.currentCarbon >= 380 && props.currentCarbon < 400) {
-                        return <div className='text-3xl'>{props.stories[2]}</div>
+                    // }
+                    // if(props.currentCarbon >= 380 && props.currentCarbon < 400) {
+                    //     return <div className='text-3xl'>{props.stories[2]}</div>
 
-                    }
-                    if(props.currentCarbon >= 460) {
-                        return <div className='text-3xl'>{props.stories[1]}</div>
+                    // }
+                    // if(props.currentCarbon >= 460) {
+                    //     return <div className='text-3xl'>{props.stories[1]}</div>
 
-                    }
+                    // }
 
             })}
         </div>
