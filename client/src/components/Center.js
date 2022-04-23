@@ -14,7 +14,7 @@ function Center(props) {
   return (
     <div className='w-1/3 h-screen text-center text-white flex flex-col items-center'>
         <div className='p-6 mb-20 text-5xl font-bold font'>
-            DATE
+            {`${props.month} ${props.year}`}
         </div>
         <Status percentage={props.percentage}/>
         <div className='transition-all duration-75 scale-[0.8]' id="earth" onClick={click}>
